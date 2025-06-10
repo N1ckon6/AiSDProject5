@@ -1,0 +1,75 @@
+\begin{tikzpicture}
+\begin{axis}[
+    title={Czas wykonania dla stałej liczby przedmiotów n=10},
+    xlabel={Pojemność plecaka (C)},
+    ylabel={Czas wykonania (s)},
+    legend pos=north west,
+    grid=major,
+    width=0.9\textwidth,
+    height=0.6\textwidth,
+    xmin=10,
+    xmax=200,
+    ymin=0,
+    ymax=0.002848148345947266,
+    scaled y ticks=false,
+    y tick label style={/pgf/number format/fixed},
+    mark options={solid}]
+    
+\addplot [
+    color=red,
+    mark=*,
+    ]
+    coordinates {
+        (10, 0.000996)
+        (20, 0.000000)
+        (30, 0.001008)
+        (40, 0.000891)
+        (50, 0.001193)
+        (60, 0.000000)
+        (70, 0.000000)
+        (80, 0.000997)
+        (90, 0.001003)
+        (100, 0.001534)
+        (110, 0.001059)
+        (120, 0.001093)
+        (130, 0.001197)
+        (140, 0.002589)
+        (150, 0.002034)
+        (160, 0.000768)
+        (170, 0.000000)
+        (180, 0.000000)
+        (190, 0.000000)
+        (200, 0.000000)
+    };
+    \addlegendentry{Brute Force}
+
+\addplot [
+    color=blue,
+    mark=square*,
+    ]
+    coordinates {
+        (10, 0.000000)
+        (20, 0.000000)
+        (30, 0.000000)
+        (40, 0.000000)
+        (50, 0.000000)
+        (60, 0.000000)
+        (70, 0.001003)
+        (80, 0.000000)
+        (90, 0.000000)
+        (100, 0.000000)
+        (110, 0.000922)
+        (120, 0.000000)
+        (130, 0.000000)
+        (140, 0.000000)
+        (150, 0.001011)
+        (160, 0.000000)
+        (170, 0.000000)
+        (180, 0.000000)
+        (190, 0.000000)
+        (200, 0.001045)
+    };
+    \addlegendentry{Dynamic Programming}
+
+\end{axis}
+\end{tikzpicture}

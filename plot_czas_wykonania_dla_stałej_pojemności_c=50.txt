@@ -1,0 +1,85 @@
+\begin{tikzpicture}
+\begin{axis}[
+    title={Czas wykonania dla stałej pojemności C=50},
+    xlabel={Liczba przedmiotów (n)},
+    ylabel={Czas wykonania (s)},
+    legend pos=north west,
+    grid=major,
+    width=0.9\textwidth,
+    height=0.6\textwidth,
+    xmin=1,
+    xmax=30,
+    ymin=0,
+    ymax=1.4938482999801637,
+    scaled y ticks=false,
+    y tick label style={/pgf/number format/fixed},
+    mark options={solid}]
+    
+\addplot [
+    color=red,
+    mark=*,
+    ]
+    coordinates {
+        (1, 0.000000)
+        (2, 0.000000)
+        (3, 0.000000)
+        (4, 0.000000)
+        (5, 0.000000)
+        (6, 0.000000)
+        (7, 0.001001)
+        (8, 0.000000)
+        (9, 0.001021)
+        (10, 0.002038)
+        (11, 0.003738)
+        (12, 0.011510)
+        (13, 0.012688)
+        (14, 0.013997)
+        (15, 0.035251)
+        (16, 0.068863)
+        (17, 0.149581)
+        (18, 0.333201)
+        (19, 0.667077)
+        (20, 1.358044)
+    };
+    \addlegendentry{Brute Force}
+
+\addplot [
+    color=blue,
+    mark=square*,
+    ]
+    coordinates {
+        (1, 0.000000)
+        (2, 0.000000)
+        (3, 0.000000)
+        (4, 0.000000)
+        (5, 0.000000)
+        (6, 0.000000)
+        (7, 0.000000)
+        (8, 0.000000)
+        (9, 0.000000)
+        (10, 0.000000)
+        (11, 0.000000)
+        (12, 0.000000)
+        (13, 0.000000)
+        (14, 0.000000)
+        (15, 0.000000)
+        (16, 0.000000)
+        (17, 0.000000)
+        (18, 0.000000)
+        (19, 0.000000)
+        (20, 0.000000)
+        (21, 0.000000)
+        (22, 0.000000)
+        (23, 0.001017)
+        (24, 0.000000)
+        (25, 0.000000)
+        (26, 0.000000)
+        (27, 0.001001)
+        (28, 0.000000)
+        (29, 0.000000)
+        (30, 0.000000)
+    };
+    \addlegendentry{Dynamic Programming}
+
+\end{axis}
+\end{tikzpicture}
