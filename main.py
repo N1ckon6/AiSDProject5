@@ -1,4 +1,5 @@
 import os
+from config import project_folder
 
 from functions import brute_force_knapsack, dynamic_programming_knapsack, experiment_varying_C, experiment_varying_n, generate_items, plot_results, read_from_file, save_to_file
 
@@ -11,9 +12,6 @@ def main():
     max_C = 200  # Maksymalna pojemność plecaka
     fixed_n = 10  # Stała liczba przedmiotów
     step_C = 10   # Krok dla C
-    
-    # Ścieżka do folderu AiSDProject5 (dostosuj do swojej ścieżki)
-    project_folder = "C:/Users/user/Downloads/AiSDProject3-main/AiSDProject5"  # Windows
     
     # Utwórz folder knapsack_data w folderze AiSDProject5
     data_folder = os.path.join(project_folder, "knapsack_data")
