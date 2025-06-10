@@ -1,7 +1,15 @@
 import os
 from config import project_folder
-
-from functions import brute_force_knapsack, dynamic_programming_knapsack, experiment_varying_C, experiment_varying_n, generate_items, plot_results, read_from_file, save_to_file
+from functions import (
+    brute_force_knapsack,
+    dynamic_programming_knapsack,
+    experiment_varying_C,
+    experiment_varying_n,
+    generate_items,
+    plot_results,
+    read_from_file,
+    save_to_file
+    )
 
 def main():
     # Ustawienia eksperymentów
@@ -46,14 +54,14 @@ def main():
     # Eksperymenty
     print("\nPrzeprowadzanie eksperymentów...")
     n_values, bf_times_n, dp_times_n = experiment_varying_n(max_n, fixed_C, step_n, data_folder)  # Pass data_folder
-    plot_results(n_values, bf_times_n, dp_times_n, 
-                f'Czas wykonania dla stałej pojemności C={fixed_C}', 
-                'Liczba przedmiotów (n)')
+    plot_results(project_folder, n_values, bf_times_n, dp_times_n,
+            f'Czas wykonania dla stałej pojemności C={fixed_C}',
+            'Liczba przedmiotów (n)')
     
     C_values, bf_times_C, dp_times_C = experiment_varying_C(fixed_n, max_C, step_C, data_folder)  # Also update experiment_varying_C similarly
-    plot_results(C_values, bf_times_C, dp_times_C, 
-                f'Czas wykonania dla stałej liczby przedmiotów n={fixed_n}', 
-                'Pojemność plecaka (C)')
+    plot_results(project_folder, C_values, bf_times_C, dp_times_C,
+            f'Czas wykonania dla stałej liczby przedmiotów n={fixed_n}',
+            'Pojemność plecaka (C)')
 
 if __name__ == "__main__":
     main()

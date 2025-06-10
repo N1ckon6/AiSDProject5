@@ -128,7 +128,7 @@ def experiment_varying_C(n, max_C, step=10, data_folder='knapsack_data', filenam
     
     return C_values, brute_force_times, dp_times
 
-def plot_results(n_values, bf_times, dp_times, title, xlabel):
+def plot_results(project_folder, n_values, bf_times, dp_times, title, xlabel):
     """Generates LaTeX tikz code for performance comparison plots"""
     # Filter out None values for Brute Force
     valid_bf = [(x, y) for x, y in zip(n_values, bf_times) if y is not None]
@@ -170,8 +170,9 @@ def plot_results(n_values, bf_times, dp_times, title, xlabel):
 \\end{tikzpicture}"""
 
     # Save to a .tex file
-    filename = f"AiSDProject5/plot_{title.replace(' ', '_').lower()}.txt"
-    with open(filename, "w", encoding="utf-8") as f:
+    plot_filename = f"plot_{title.replace(' ', '_').lower()}.txt"
+    full_path = os.path.join(project_folder, plot_filename)
+    with open(full_path, "w", encoding="utf-8") as f:
         f.write(tikz_code)
-    
-    print(f"Generated LaTeX plot file: {filename}")
+
+    print(f"Generated LaTeX plot file: {full_path}")
