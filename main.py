@@ -1,5 +1,4 @@
 import os
-from config import project_folder
 from functions import (
     brute_force_knapsack,
     dynamic_programming_knapsack,
@@ -10,6 +9,8 @@ from functions import (
     read_from_file,
     save_to_file
     )
+
+project_folder = os.path.dirname(os.path.abspath(__file__))
 
 def main():
     # Ustawienia eksperymentów
